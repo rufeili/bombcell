@@ -1,0 +1,6 @@
+{
+  "maxRPVviolations": 0.2,
+  "plotGlobal": 0,
+  "minNumSpikes": 100,
+  "ephys_sample_rate": 30000
+}
