@@ -16,4 +16,7 @@ fclose(fid);
 fprintf('JSON config safely created at: %s\n', savePath);
 
 % Forcing the compiler to explicitly include an entire folder just in case
-mcc -m run_bombcell_single.m -d 'C:\Users\RufeiLi\Documents\Bombcell_MAT_compiled' -a C:\path\to\bombcell\folder
+apptainer run --bind /share/software/user/restricted/matlab/R2023b:/opt/matlab_runtime \
+bombcell_pipeline.sif \
+'/scratch/users/rufeili/KS4_Output_Done/catgt_20251231_670-2L_d1_g3' \
+'/home/groups/giocomo/rufeili/useful_files/bombcell_config_20260606.json'
